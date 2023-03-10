@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@600&family=Shantell+Sans:ital,wght@1,500&family=Vollkorn:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Laila', sans-serif;
+    font-family: 'Shantell Sans', cursive;
+    font-family: 'Vollkorn', serif;
+
+}
+
+:root{
+    --header-color : #f09306;
+    --text-color : #ffffffff;
+    --hover-color : #333;
+    --background-color : #67645f;
+    --footer-color: #dcd6cf;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+h1,h2,h3{
+    font-size: 20px;
+    font-weight: 700;
+    padding: 20px;
+    margin: auto;
+}
+
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 30px;
+    margin-bottom: 430px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: floralwhite;
+    background-color: var(--header-color);
+}
+.cabecera{
+    background-color: var(--header-color);
+}
+
+.cabecera .logo{
+    font-size: 30px;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+}
+
+.menu_principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu_principal a{
+    color: var(--text-color);
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 15px;
+}
+
+.menu_principal a:hover{
+    background-color: var(--hover-color);
+}
+
+/*Seccion Hero*/
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("images/background_hero.jpg");
+    color: #faebd7;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero h1{
+    font-size: 30px;
+    color: #faebd7;
+    margin-top: 420px;
+}
+
+#hero button{
+    font-size: 1.75em;
+    margin-top: -0px;
+}
+
+.catalogo_productos{
+    background-color: var(--background-color);
+}
+
+.catalogo_menu{
+    display: flex;
+}
+
+.catalogo_menu h3{
+    font-size: 20px;
+    white-space: pre;
+    color: var(--text-color);
+}
+
+.catalogo_menu input{
+    width: 420px;
+    height: 30px;
+    margin-top: 20px;
+    content: 'Hola';
+    margin-right: 20px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.productos_grid{
+    border-image: space;
+    display: grid;
+    color: var(--text-color);
+    font-size: 20px;
+    text-align: center;
+    grid-template-columns: repeat(1,1fr);
+    padding: 10px;
+}
+
+.productos_grid li{
+    list-style-type: none;
+}
+
+.caracteristicas{
+    background-color: var(--header-color);
+}
+
+.caracteristicas .container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.caracteristicas h2{
+    color: var(--text-color);
+}
+
+.caracteristicas .container li{
+    list-style-type: none;
+}
+
+.caracteristicas .container li a{
+    display: initial;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-left: 20px;
+}
+
+.caracteristicas .container li a:hover{
+    background-color: var(--hover-color);
+}
+
+.filtro{
+    display: none;
+}
+
+@media(min-width:768px){
+    #hero{
+        min-height: 100vh;
+    }
+
+    #hero h1{
+        margin-top: 370px;
+    }
+    .catalogo_menu{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .catalogo_menu .titulo_catalogo{
+        margin-left: 20px;
+        font-size: 30px;
+    }
+
+    .catalogo_menu #textBuscador{
+        margin-left: 120px;
+        width: 430px;
+        height: 40px;
+    }
+
+    .productos_grid{
+        grid-template-columns: repeat(3,1fr);
+        margin-left: 50px;
+        gap: 20px;
+    }
+
+    .articulo{
+        margin-left: 170px;
+        color: var(--text-color);
+        font-size: 20px;
+    }
+
+}
